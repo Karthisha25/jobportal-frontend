@@ -1,0 +1,221 @@
+
+{
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Frontend Developer",
+      "company": "Infosys",
+      "location": "Hyderabad",
+      "jobType": "Full Time",
+      "experience": "Fresher",
+      "salary": "3.5 - 5 LPA",
+      "salaryLevel": "Low",
+      "category": "IT",
+      "skills": ["HTML", "CSS", "React"],
+      "description": "Looking for frontend developers with knowledge of React, HTML and CSS."
+    },
+    {
+      "id": "2",
+      "title": "Software Developer",
+      "company": "TCS",
+      "location": "Bangalore",
+      "jobType": "Full Time",
+      "experience": "Fresher",
+      "salary": "4 - 6 LPA",
+      "salaryLevel": "Medium",
+      "category": "IT",
+      "skills": ["Java", "Python", "SQL"],
+      "description": "Looking for software developers to build and maintain applications."
+    },
+    {
+      "id": "3",
+      "title": "Graduate Engineer Trainee",
+      "company": "Accenture",
+      "location": "Hyderabad",
+      "jobType": "Full Time",
+      "experience": "Fresher",
+      "salary": "4 - 5 LPA",
+      "salaryLevel": "Low",
+      "category": "IT",
+      "skills": ["Java", "SQL", "Python"],
+      "description": "Looking for graduate engineer trainees interested in software development."
+    },
+    {
+      "id": "4",
+      "title": "Python Developer",
+      "company": "Wipro",
+      "location": "Chennai",
+      "jobType": "Full Time",
+      "experience": "0-1 Years",
+      "salary": "4 - 6 LPA",
+      "salaryLevel": "Medium",
+      "category": "Software Development",
+      "skills": ["Python", "Django", "MySQL"],
+      "description": "Seeking Python developers to develop backend applications and APIs."
+    },
+    {
+      "id": "5",
+      "title": "Data Analyst",
+      "company": "Deloitte",
+      "location": "Hyderabad",
+      "jobType": "Full Time",
+      "experience": "Fresher",
+      "salary": "5 - 7 LPA",
+      "salaryLevel": "Medium",
+      "category": "Data Science",
+      "skills": ["Python", "SQL", "Power BI", "Excel"],
+      "description": "Analyze business data and prepare reports to support business decisions."
+    },
+    {
+      "id": "6",
+      "title": "Machine Learning Engineer",
+      "company": "Google",
+      "location": "Bangalore",
+      "jobType": "Full Time",
+      "experience": "1-2 Years",
+      "salary": "12 - 18 LPA",
+      "salaryLevel": "High",
+      "category": "AI & ML",
+      "skills": ["Python", "Machine Learning", "TensorFlow"],
+      "description": "Develop and improve machine learning models for real-world applications."
+    },
+    {
+      "id": "7",
+      "title": "Java Developer",
+      "company": "Capgemini",
+      "location": "Pune",
+      "jobType": "Full Time",
+      "experience": "Fresher",
+      "salary": "4 - 6 LPA",
+      "salaryLevel": "Medium",
+      "category": "Software Development",
+      "skills": ["Java", "Spring Boot", "SQL"],
+      "description": "Work on Java-based enterprise applications and backend services."
+    },
+    {
+      "id": "8",
+      "title": "UI UX Designer",
+      "company": "Amazon",
+      "location": "Bangalore",
+      "jobType": "Full Time",
+      "experience": "0-1 Years",
+      "salary": "6 - 9 LPA",
+      "salaryLevel": "High",
+      "category": "Design",
+      "skills": ["Figma", "UI Design", "Wireframing"],
+      "description": "Design user-friendly interfaces and improve digital experiences."
+    },
+    {
+      "id": "9",
+      "title": "Backend Developer",
+      "company": "IBM",
+      "location": "Hyderabad",
+      "jobType": "Full Time",
+      "experience": "1-2 Years",
+      "salary": "7 - 10 LPA",
+      "salaryLevel": "High",
+      "category": "Software Development",
+      "skills": ["Node.js", "Express", "MongoDB"],
+      "description": "Build scalable backend services, APIs and database integrations."
+    },
+    {
+      "id": "10",
+      "title": "Data Scientist",
+      "company": "Microsoft",
+      "location": "Noida",
+      "jobType": "Full Time",
+      "experience": "1-2 Years",
+      "salary": "10 - 15 LPA",
+      "salaryLevel": "High",
+      "category": "Data Science",
+      "skills": ["Python", "Statistics", "Machine Learning"],
+      "description": "Analyze large datasets and develop predictive machine learning models."
+    },
+    {
+      "id": "11",
+      "title": "Cloud Engineer",
+      "company": "Amazon Web Services",
+      "location": "Hyderabad",
+      "jobType": "Full Time",
+      "experience": "Fresher",
+      "salary": "5 - 8 LPA",
+      "salaryLevel": "Medium",
+      "category": "Cloud Computing",
+      "skills": ["AWS", "Linux", "Networking"],
+      "description": "Assist in managing cloud infrastructure and deploying cloud applications."
+    },
+    {
+      "id": "12",
+      "title": "Cybersecurity Analyst",
+      "company": "HCL Technologies",
+      "location": "Chennai",
+      "jobType": "Full Time",
+      "experience": "0-1 Years",
+      "salary": "4 - 6 LPA",
+      "salaryLevel": "Medium",
+      "category": "Cybersecurity",
+      "skills": ["Networking", "Linux", "Security"],
+      "description": "Monitor security systems and identify potential cybersecurity threats."
+    },
+    {
+      "id": "13",
+      "title": "React Developer",
+      "company": "Flipkart",
+      "location": "Bangalore",
+      "jobType": "Full Time",
+      "experience": "1-2 Years",
+      "salary": "8 - 12 LPA",
+      "salaryLevel": "High",
+      "category": "Web Development",
+      "skills": ["React", "JavaScript", "CSS"],
+      "description": "Develop responsive web applications using React and modern frontend technologies."
+    },
+    {
+      "id": "14",
+      "title": "Business Analyst",
+      "company": "Cognizant",
+      "location": "Hyderabad",
+      "jobType": "Full Time",
+      "experience": "Fresher",
+      "salary": "3 - 5 LPA",
+      "salaryLevel": "Low",
+      "category": "Business Analytics",
+      "skills": ["SQL", "Excel", "Power BI"],
+      "description": "Understand business requirements and prepare analytical reports."
+    },
+    {
+      "id": "15",
+      "title": "DevOps Engineer",
+      "company": "LTIMindtree",
+      "location": "Mumbai",
+      "jobType": "Full Time",
+      "experience": "1-2 Years",
+      "salary": "7 - 11 LPA",
+      "salaryLevel": "High",
+      "category": "Cloud Computing",
+      "skills": ["Docker", "AWS", "Jenkins", "Linux"],
+      "description": "Manage deployment pipelines and automate software development workflows."
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Teja",
+      "email": "teja@gmail.com",
+      "password": "admin123"
+    },
+    {
+      "name": "Karthisha Veeramachaneni",
+      "email": "karthishaa99@gmail.com",
+      "password": "123456",
+      "id": "DgvWS9hY1QQ"
+    },
+    {
+      "name": "Karthisha Veeramachaneni",
+      "email": "karthishaa99@gmail.com",
+      "password": "123456",
+      "id": "akUVaO0B0tI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
