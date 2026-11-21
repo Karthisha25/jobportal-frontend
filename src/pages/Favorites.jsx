@@ -1,52 +1,121 @@
 
 import { useSelector, useDispatch } from "react-redux";
 import { removeFavorite } from "../features/favoriteSlice";
+import { useNavigate } from "react-router-dom";
 
 function Favorites() {
-  const favorites = useSelector((state) => state.favorites);
+  const favorites = useSelector(
+    (state) => state.favorites
+  );
+
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   return (
     <div className="jobs-page">
+
       <h1>My Favorite Jobs ❤️</h1>
 
       {favorites.length === 0 ? (
-        <p>No favorite jobs added yet!</p>
+        <div className="empty-favorites">
+          <h3>No favorite jobs yet!</h3>
+          <p>
+            Explore available jobs and click the heart icon
+            to save your favorites.
+          </p>
+
+          <button
+            className="view-details-btn"
+            onClick={() => navigate("/jobs")}
+          >
+            Explore Jobs
+          </button>
+        </div>
       ) : (
         <div className="jobs-container">
-          {favorites.map((job) => (
-            <div className="card" key={job.id}>
 
-              {job.image && (
-                <img
-                  src={job.image}
-                  alt={job.company}
-                  className="job-image"
-                />
-              )}
+          {favorites.map((job) => {
+            const id = job._id || job.id;
 
-              <h3>{job.title}</h3>
-              <h4>{job.company}</h4>
+            return (
+              <div className="job-card" key={id}>
 
-              <p>
-                <strong>Location:</strong> {job.location || "Not specified"}
-              </p>
+                {/* Job Image */}
+                <div className="company-logo">
+                  {job.image ? (
+                    <img
+                      src={job.image}
+                      alt={job.company}
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                      }}
+                    />
+                  ) : (
+                    <div className="company-name">
+                      {job.company}
+                    </div>
+                  )}
+                </div>
 
-              <p>
-                <strong>Salary:</strong> {job.salary || "Not specified"}
-              </p>
+                {/* Job Information */}
+                <div className="job-card-header">
+                  <div>
+                    <h3>{job.title}</h3>
+                    <p className="company-name">
+                      {job.company}
+                    </p>
+                  </div>
 
-              <button
-                className="delete-btn"
-                onClick={() => dispatch(removeFavorite(job.id))}
-              >
-                Remove from Favorites
-              </button>
+                  <span className="favorite-btn active">
+                    ♥
+                  </span>
+                </div>
 
-            </div>
-          ))}
+                <div className="job-badges">
+                  <span>{job.jobType}</span>
+                  <span>{job.experience}</span>
+                </div>
+
+                <div className="job-info">
+                  <p>
+                    📍 {job.location || "Not specified"}
+                  </p>
+
+                  <p>
+                    💰 {job.salary || "Not specified"}
+                  </p>
+
+                  <p>
+                    💼 {job.category || "Not specified"}
+                  </p>
+                </div>
+
+                {/* Actions */}
+                <div className="job-card-actions">
+
+                  <button
+                    className="view-details-btn"
+                    onClick={() => navigate(`/jobs/${id}`)}
+                  >
+                    View Details
+                  </button>
+
+                  <button
+                    className="delete-btn"
+                    onClick={() => dispatch(removeFavorite(id))}
+                  >
+                    Remove
+                  </button>
+
+                </div>
+
+              </div>
+            );
+          })}
+
         </div>
       )}
+
     </div>
   );
 }
