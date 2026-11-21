@@ -1,11 +1,21 @@
+
 {
-  "name": "careerly-backend",
-  "version": "1.0.0",
+  "name": "jobportal",
+  "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "start": "json-server --watch db.json --host 0.0.0.0 --port $PORT"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.3.6"
   },
   "dependencies": {
-    "json-server": "0.17.4"
+    "@reduxjs/toolkit": "^2.14.0",
+    "axios": "^1.21.0",
+    "react-redux": "^9.3.1",
+    "react-router-dom": "^7.18.5"
   }
 }
