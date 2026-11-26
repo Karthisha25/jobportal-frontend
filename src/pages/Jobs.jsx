@@ -85,6 +85,39 @@ function Jobs() {
     );
   }
 
+  // Extract the starting salary in LPA
+  function getSalary(value) {
+    const match = String(value || "").match(/\d+(?:\.\d+)?/);
+    return match ? Number(match[0]) : null;
+  }
+
+  // Check whether a job belongs to the selected salary range
+  function matchesSalaryRange(value) {
+    if (salary === "All") return true;
+
+    const amount = getSalary(value);
+
+    // Ignore jobs without salary information
+    if (amount === null) return false;
+
+    switch (salary) {
+      case "below4":
+        return amount < 4;
+
+      case "4-6":
+        return amount >= 4 && amount < 6;
+
+      case "6-10":
+        return amount >= 6 && amount <= 10;
+
+      case "above10":
+        return amount > 10;
+
+      default:
+        return true;
+    }
+  }
+
   const filteredJobs = jobs.filter((job) => {
     const matchesSearch =
       (job.title || "")
@@ -99,10 +132,7 @@ function Jobs() {
       job.category === category;
 
     const matchesSalary =
-      salary === "All" ||
-      (job.salary || "")
-        .toLowerCase()
-        .includes(salary.toLowerCase());
+      matchesSalaryRange(job.salary);
 
     return (
       matchesSearch &&
@@ -121,12 +151,10 @@ function Jobs() {
 
   if (sort === "salary") {
     sortedJobs.sort((a, b) => {
-      const getSalary = (value) => {
-        const match = String(value || "").match(/\d+(\.\d+)?/);
-        return match ? Number(match[0]) : 0;
-      };
-
-      return getSalary(b.salary) - getSalary(a.salary);
+      return (
+        (getSalary(b.salary) || 0) -
+        (getSalary(a.salary) || 0)
+      );
     });
   }
 
@@ -149,6 +177,7 @@ function Jobs() {
           onChange={(e) => setCategory(e.target.value)}
         >
           <option value="All">All Categories</option>
+
           {[...new Set(
             jobs.map((job) => job.category).filter(Boolean)
           )].map((item) => (
@@ -163,7 +192,10 @@ function Jobs() {
           onChange={(e) => setSalary(e.target.value)}
         >
           <option value="All">All Salaries</option>
-          <option value="LPA">LPA</option>
+          <option value="below4">Below 4 LPA</option>
+          <option value="4-6">4–6 LPA</option>
+          <option value="6-10">6–10 LPA</option>
+          <option value="above10">Above 10 LPA</option>
         </select>
 
         <select
